@@ -4053,6 +4053,33 @@ div.choose-sub-color {
   color: var(--tp-common-white);
 }
 
+
+/*----------------------------------------*/
+/*  COUNTDOWN CSS 
+/*----------------------------------------*/
+
+.countdown-timer {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: black; /* Ensure text color is visible */
+  position: relative; 
+  z-index: 10;
+}
+
+.countdown-timer span {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: black; /* Temporarily use a bright color */
+  color: white; /* Ensure text color is visible */
+  border-radius: 5px;
+}
+
+
+
+
+
 /*----------------------------------------*/
 /*  09. CHOOSE CSS START
 /*----------------------------------------*/
