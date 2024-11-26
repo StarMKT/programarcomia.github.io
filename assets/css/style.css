@@ -4393,7 +4393,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .c-details-sidebar {
-  padding: 15px 15px 50px 15px;
+  padding: 15px 15px 15px 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 5px;
 }
@@ -4439,7 +4439,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   font-size: 16px;
   font-weight: 500;
   font-family: "Gordita-500";
-  background: var(--tp-heading-secondary);
+  background: #ee7830;
   color: var(--tp-common-white);
   border-radius: 10px;
   margin-bottom: 10px;
@@ -4587,35 +4587,65 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 /*  COUNTDOWN CSS 
 /*----------------------------------------*/
 
+
 .countdown-timer {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-  color: black;
-  /* Ensure text color is visible */
-  position: relative;
-  z-index: 10;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.countdown-timer #countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .countdown-timer span {
-  display: inline-block;
-  margin: 0 5px;
-  padding: 10px;
-  background-color: black;
-  /* Temporarily use a bright color */
-  color: white;
-  /* Ensure text color is visible */
-  border-radius: 5px;
-  z-index: 10;
+  font-size: 1em;
+  margin: 0 10px;
+}
+
+.countdown-timer span#days, 
+.countdown-timer span#hours, 
+.countdown-timer span#minutes, 
+.countdown-timer span#seconds {
+  font-weight: bold;
+}
+
+
+/* COUNTDOWN COPY */
+
+.countdown-timer-copy {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.countdown-timer-copy #countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-timer-copy span {
+  font-size: 2em;
+  margin: 0 10px;
+}
+
+.countdown-timer-copy span#days, 
+.countdown-timer-copy span#hours, 
+.countdown-timer-copy span#minutes, 
+.countdown-timer-copy span#seconds {
+  font-weight: bold;
 }
 
 
 
-@media (min-width: 992px) {
-  .countdown-timer {
-    display: block !important;
-  }
-}
+
 
 
 /*----------------------------------------*/
