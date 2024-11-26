@@ -4072,8 +4072,9 @@ div.choose-sub-color {
   margin: 0 5px;
   padding: 10px;
   background-color: black; /* Temporarily use a bright color */
-  color: white; /* Ensure text color is visible */
+  color: purple; /* Ensure text color is visible */
   border-radius: 5px;
+  z-index: 10;
 }
 
 
