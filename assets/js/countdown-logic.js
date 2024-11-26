@@ -18,9 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            const hoursElement = document.getElementById("hours");
+            const minutesElement = document.getElementById("minutes");
+            const secondsElement = document.getElementById("seconds");
+
+            // Update only the elements that change
+
+            if (hoursElement.innerText !== (hours < 10 ? "0" + hours : hours).toString()) {
+                hoursElement.innerText = hours < 10 ? "0" + hours : hours;
+            }
+            if (minutesElement.innerText !== (minutes < 10 ? "0" + minutes : minutes).toString()) {
+                minutesElement.innerText = minutes < 10 ? "0" + minutes : minutes;
+            }
+            if (secondsElement.innerText !== (seconds < 10 ? "0" + seconds : seconds).toString()) {
+                secondsElement.innerText = seconds < 10 ? "0" + seconds : seconds;
+            }
 
             if (distance < 0) {
                 clearInterval(countdownInterval);
