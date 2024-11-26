@@ -22,21 +22,25 @@ document.addEventListener("DOMContentLoaded", function() {
             const minutesElement = document.getElementById("minutes");
             const secondsElement = document.getElementById("seconds");
 
-            // Update only the elements that change
+            // Prepare new values
+            const newHours = hours < 10 ? "0" + hours : hours;
+            const newMinutes = minutes < 10 ? "0" + minutes : minutes;
+            const newSeconds = seconds < 10 ? "0" + seconds : seconds;
 
-            if (hoursElement.innerText !== (hours < 10 ? "0" + hours : hours).toString()) {
-                hoursElement.innerText = hours < 10 ? "0" + hours : hours;
+            // Update only the elements that change
+            if (hoursElement.innerText !== newHours) {
+                hoursElement.innerText = newHours;
             }
-            if (minutesElement.innerText !== (minutes < 10 ? "0" + minutes : minutes).toString()) {
-                minutesElement.innerText = minutes < 10 ? "0" + minutes : minutes;
+            if (minutesElement.innerText !== newMinutes) {
+                minutesElement.innerText = newMinutes;
             }
-            if (secondsElement.innerText !== (seconds < 10 ? "0" + seconds : seconds).toString()) {
-                secondsElement.innerText = seconds < 10 ? "0" + seconds : seconds;
+            if (secondsElement.innerText !== newSeconds) {
+                secondsElement.innerText = newSeconds;
             }
 
             if (distance < 0) {
                 clearInterval(countdownInterval);
-                element.innerHTML = "OFFER EXPIRED";
+                element.innerHTML = "OFERTA EXPIRADA!";
             }
         }
 

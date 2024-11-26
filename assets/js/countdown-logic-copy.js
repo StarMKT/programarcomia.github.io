@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (distance < 0) {
                 clearInterval(countdownInterval);
-                element.innerHTML = "OFFER EXPIRED";
+                element.innerHTML = "OFERTA EXPIRADA!";
             }
         }
 
